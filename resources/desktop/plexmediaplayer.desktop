@@ -3,21 +3,17 @@ Version=1.0
 Name=Plex Media Player
 GenericName=Media Player
 Comment=View your media
-Exec=plexmediaplayer
+Exec= QT_XCB_GL_INTEGRATION=xcb_egl plexmediaplayer --fullscreen --tv
 Icon=plexmediaplayer
 Terminal=false
 Type=Application
 Categories=AudioVideo;Video;Player;TV;
 
-Actions=TVF;TVW;DesktopF;DesktopW;
+Actions=TV;DesktopF;DesktopW;
 
-[Desktop Action TVF]
-Name=TV [Fullscreen]
+[Desktop Action TV]
+Name=TV
 Exec=plexmediaplayer --fullscreen --tv
-
-[Desktop Action TVW]
-Name=TV [Windowed]
-Exec=plexmediaplayer --windowed --tv
 
 [Desktop Action DesktopF]
 Name=Desktop [Fullscreen]

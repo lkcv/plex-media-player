@@ -86,6 +86,8 @@ bool DisplayManager::isRateMultipleOf(float refresh, float multiple, bool exact)
       return false;
 
   long factor = roundedMultiple / roundedRefresh;
+  if (factor > 2)
+	return false;
   float newRate = factor * refresh;
   if (newRate < 1)
     return false;
